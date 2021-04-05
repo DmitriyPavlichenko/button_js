@@ -8,7 +8,7 @@ button.onclick = function () {
     let step;
     while(true) {
         step = prompt('Write step: ', '5');
-        if (step >= 1 && step <= 50) {
+        if (step > 1 && step <= 15) {
             alert("All is right. Result is near...");
             break;
         } else {
@@ -19,7 +19,7 @@ button.onclick = function () {
     let numberSequence = "";
     let sumOdd = 0;
     let currentNumb;
-    for (let i = 1; i < step; i++) {
+    for (let i = 1; i <= step; i++) {
         currentNumb = (i * i * i) * Math.pow(3, (2 * i));
         if (currentNumb % 2 !== 0) {
             numberSequence += currentNumb.toString().fontcolor("red") + " ";
